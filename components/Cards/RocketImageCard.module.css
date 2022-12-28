@@ -1,0 +1,38 @@
+.rocketImageCard {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 420px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+.rocketImageCard span {
+  box-shadow: 5px 5px 1rem rgba(0, 0, 0, 1);
+  border-radius: 20px;
+  margin-right: 0.5em !important;
+}
+
+.rocketImageCard h4 {
+  font-size: 1.6rem;
+  text-shadow: #000000 5px 5px 5px;
+  top: 10%;
+  width: 90%;
+  position: absolute;
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (max-width: 1199px) {
+  .rocketImageCard {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}

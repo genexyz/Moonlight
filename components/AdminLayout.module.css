@@ -1,0 +1,94 @@
+.main__section {
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.adminContainer {
+  margin-top: 5em !important;
+  margin-bottom: 1em !important;
+  max-width: 95%;
+  background-color: #1c0522;
+  overflow-y: scroll;
+}
+
+.adminRow {
+  background-color: rgb(89, 0, 89);
+  color: white;
+  text-align: center;
+}
+
+.adminCol {
+  cursor: pointer;
+  color: white;
+  font-size: 1.3em;
+  font-weight: 700;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: solid 2px black;
+}
+.adminCol:hover {
+  background-color: rgb(228, 228, 228);
+  color: black;
+}
+.adminCol:active {
+  background-color: #fff;
+  color: black;
+}
+.activeTab {
+  background-color: #fff;
+  color: black;
+}
+
+.adminColInactive {
+  color: white;
+  font-size: 1.3em;
+  font-weight: 700;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: solid 2px black;
+  background-color: rgb(97, 97, 97);
+}
+
+.notFound {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.notFoundH1 {
+  font-size: 4em;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.notFoundH2 {
+  font-size: 3em;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0.5em;
+}
+
+.notFoundP {
+  font-size: 1.8em;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}

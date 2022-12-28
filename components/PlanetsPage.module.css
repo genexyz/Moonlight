@@ -1,0 +1,81 @@
+.main__section {
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.planetsContainer {
+  overflow-y: scroll;
+  margin-top: 4.5em !important;
+}
+
+.planetsContainer::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.planetsContainer::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.planetsContainer::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(45deg, #00aeff, #a68eff);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 13px 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 3px 13px 1px;
+}
+
+.planetsSearchDiv {
+  margin-bottom: 3em !important;
+  border-radius: 20px !important;
+  border: 3px solid #5e24bb !important;
+}
+
+.planetsSearchInput {
+  background-color: #2f1755 !important;
+  line-height: 2 !important;
+  border-radius: 15px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border: 1px solid #2f1755 !important;
+  color: white !important;
+}
+.planetsSearchInput:focus {
+  background-color: #2f1755 !important;
+  box-shadow: none;
+}
+
+.planetsSearchGravityInput {
+  width: 80px;
+  height: 40px;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 0.8em;
+  color: black;
+  display: inline-block;
+}
+
+.planetsSearchFilters {
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  background-color: #2f1755 !important;
+  border-color: black !important;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.planetsSearchFiltersCheckboxTitle {
+  font-weight: 700;
+  color: #fff;
+  padding-left: 0.7em;
+}
+.planetsSearchFiltersCheckboxSymbol {
+  font-weight: 700;
+  color: #fff;
+}
+
+.planetsSearchFiltersCheckbox {
+  padding-left: 2.5em;
+  margin-right: 0.5em;
+  color: #fff;
+}

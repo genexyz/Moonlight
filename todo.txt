@@ -1,0 +1,43 @@
+TODO:
+[APP-WIDE]
+-Add i18n for multiple languages.
+-Create an User Profile page (User image, level, launches, visited planets, and more).
+-Optimize background images and remove the moving effects from some pages, to improve performance.
+-Login callback to previous page.
+-Validate that the web supports keyboard driven browsing.
+-Validate that all dates adjust to the user local timezone.
+-Add Spinner for loading status.
+-Close Navbar when changing route on mobile.
+-Change Dropdowns light blue background for options.
+-Improve Date Picker to avoid keyboard inputs and auto open on input click.
+-Expand app testing with cypress.
+-Optimize again with lighthouse and sonarcloud.
+-Create custom OG Image for social sharing.
+-Organize components folder.
+-Remove or organize comments on imports on each file.
+-Highlight current route on navbar
+
+[LAUNCH]
+-Remove past dates from datepicker.
+-Design a good looking ticket to be shown at the end of the launch creation process and in the specific launch page.
+-Implement discounts on launch price according to user level.
+-Improve rocket selection table on mobile.
+-Change flight number generation to account for possible duplicates.
+-Sort rows on rocket selection by cost or duration.
+-Redirect created launch to specific launch page instead of /launches.
+
+[LAUNCHES]
+-Change the table layout to a cards layout for clarity and responsiveness.
+
+[ADMIN]
+-Implement an image uploading feature instead of entering the image url.
+
+[BUGS]
+-Moon brightness effect on main page is cut on top when scrolling down.
+-Invalid styles on inputs aren't the same across all the app.
+-Small white square on rocket page, bottom right corner.
+-Small margin on admin navbar, right to users.
+
+[To evaluate doing]
+-Generate individual pages statically to improve SEO. (this also means changing from a generated random ID to a unique name ID).
+-Migrate to NextJS 13.

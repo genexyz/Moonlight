@@ -1,0 +1,123 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Planet {
+  id        String     @default(cuid()) @id
+  name     String    @unique
+  description   String
+  gravity   Float
+  type   String
+  coords   String
+  color1   String
+  color2   String
+  image   String?
+  destinations      Destination[]
+}
+
+model Destination{
+  id        String     @default(cuid()) @id
+  name     String   @unique
+  description   String
+  image   String?
+  planetId  String
+  planet    Planet  @relation(fields: [planetId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  launchOrigin Launch[] @relation(name: "launchOrigin")
+  launchDestination Launch[] @relation(name: "launchDestination")
+}
+
+model Rocket {
+  id        String     @default(cuid()) @id
+  name     String  @unique
+  baseCost   Float
+  distCost   Float
+  autonomy   Int
+  power   Float
+  height   Float
+  weight   Float
+  maxSpeed   Float
+  image   String?
+  interiorImage  String?
+  exteriorImage  String?
+  launches  Launch[]
+}
+
+model Launch{
+  id        String     @default(cuid()) @id
+  flightNumber     String @unique
+  description   String
+  cost   Float
+  distance   Float
+  duration   Float
+  date DateTime  @default(now())
+  rocketId  String?
+  rocket   Rocket?  @relation(fields: [rocketId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  originId String?
+  origin   Destination? @relation(fields: [originId], references: [id], name: "launchOrigin", onDelete: Cascade, onUpdate: Cascade)
+  destinationId String?
+  destination   Destination? @relation(fields: [destinationId], references: [id], name: "launchDestination", onDelete: Cascade, onUpdate: Cascade)
+  userId  String?
+  user    User?   @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+}
+
+model User {
+  id            String       @default(cuid()) @id
+  name          String
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String? @default("https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360")
+  level         Int? @default(1)
+  admin         Boolean? @default(false)
+  launches      Launch[]
+  accounts      Account[]
+  sessions      Session[]
+}
+
+model Account {
+  id                 String  @id @default(cuid())
+  userId             String  
+  type               String
+  provider           String
+  providerAccountId  String  
+  refresh_token      String? @db.Text
+  access_token       String? @db.Text
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String? @db.Text
+  session_state      String?
+  oauth_token_secret String?
+  oauth_token        String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String  
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}

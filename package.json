@@ -1,0 +1,39 @@
+{
+  "name": "moonlight",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "cypress": "cypress open",
+    "cypress:headless": "cypress run"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.6",
+    "@mui/material": "^5.10.8",
+    "@mui/x-date-pickers": "^5.0.3",
+    "@next-auth/prisma-adapter": "^1.0.4",
+    "@prisma/client": "^4.8.0",
+    "bootstrap": "^5.2.0",
+    "dayjs": "^1.11.5",
+    "framer-motion": "7.0.0",
+    "next": "^12.2.2",
+    "next-auth": "^4.10.3",
+    "nprogress": "^0.2.0",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "18.2.0",
+    "react-notifications": "^1.7.4"
+  },
+  "devDependencies": {
+    "cypress": "^11.2.0",
+    "eslint": "8.19.0",
+    "eslint-config-next": "12.2.2",
+    "prisma": "^4.8.0",
+    "prisma-dbml-generator": "^0.9.1"
+  }
+}

@@ -1,0 +1,98 @@
+.card {
+  padding: 2rem;
+  position: relative;
+  padding-left: 2rem;
+  padding-right: 5rem;
+}
+.card p {
+  padding-top: 1rem;
+  line-height: 150%;
+  margin: 0;
+}
+.card span {
+  font-weight: 700;
+  color: black;
+}
+.card h2 {
+  color: white;
+  text-shadow: 1px 1px 1rem rgba(0, 0, 0, 1);
+  padding-left: 0rem;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+.card .imgDiv {
+  height: 7rem;
+  width: 7rem;
+  position: absolute;
+  top: -2.5rem;
+  right: -2.5rem;
+}
+
+.forTest {
+  min-height: 10vh;
+  display: flex;
+  padding: 3vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_primary {
+  cursor: pointer;
+  outline: none;
+  border: solid 1px white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 50px;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.expand {
+  width: 20rem;
+}
+
+.openMargin {
+  margin: 2em;
+}
+
+.cardStrongP {
+  font-weight: 700;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .forTest {
+    min-height: 10vh;
+    display: flex;
+    padding: 1.5em;
+    padding-left: 0;
+    padding-right: 0.5em;
+    justify-content: center;
+    align-items: center;
+  }
+  .openMargin {
+    margin: 0em;
+  }
+  .card {
+    padding: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+  }
+  .openCard {
+    padding-right: 4.2rem !important;
+  }
+  .card h2 {
+    font-size: 22px;
+  }
+  .card .imgDiv {
+    height: 5rem;
+    width: 5rem;
+    top: -1rem;
+    right: -1.8rem;
+  }
+  .expand {
+    width: 13.5rem;
+  }
+}

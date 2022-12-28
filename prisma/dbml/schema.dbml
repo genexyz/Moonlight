@@ -1,0 +1,128 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table Planet {
+  id String [pk]
+  name String [unique, not null]
+  description String [not null]
+  gravity Float [not null]
+  type String [not null]
+  coords String [not null]
+  color1 String [not null]
+  color2 String [not null]
+  image String
+  destinations Destination [not null]
+}
+
+Table Destination {
+  id String [pk]
+  name String [unique, not null]
+  description String [not null]
+  image String
+  planetId String [not null]
+  planet Planet [not null]
+  launchOrigin Launch [not null]
+  launchDestination Launch [not null]
+}
+
+Table Rocket {
+  id String [pk]
+  name String [unique, not null]
+  baseCost Float [not null]
+  distCost Float [not null]
+  autonomy Int [not null]
+  power Float [not null]
+  height Float [not null]
+  weight Float [not null]
+  maxSpeed Float [not null]
+  image String
+  interiorImage String
+  exteriorImage String
+  launches Launch [not null]
+}
+
+Table Launch {
+  id String [pk]
+  flightNumber String [unique, not null]
+  description String [not null]
+  cost Float [not null]
+  distance Float [not null]
+  duration Float [not null]
+  date DateTime [default: `now()`, not null]
+  rocketId String
+  rocket Rocket
+  originId String
+  origin Destination
+  destinationId String
+  destination Destination
+  userId String
+  user User
+}
+
+Table User {
+  id String [pk]
+  name String [not null]
+  email String [unique]
+  emailVerified DateTime
+  image String [default: 'https://cdn-icons-png.flaticon.com/512/1053/1053244.png?w=360']
+  level Int [default: 1]
+  admin Boolean [default: false]
+  launches Launch [not null]
+  accounts Account [not null]
+  sessions Session [not null]
+}
+
+Table Account {
+  id String [pk]
+  userId String [not null]
+  type String [not null]
+  provider String [not null]
+  providerAccountId String [not null]
+  refresh_token String
+  access_token String
+  expires_at Int
+  token_type String
+  scope String
+  id_token String
+  session_state String
+  oauth_token_secret String
+  oauth_token String
+  user User [not null]
+
+  indexes {
+    (provider, providerAccountId) [unique]
+  }
+}
+
+Table Session {
+  id String [pk]
+  sessionToken String [unique, not null]
+  userId String [not null]
+  expires DateTime [not null]
+  user User [not null]
+}
+
+Table VerificationToken {
+  identifier String [not null]
+  token String [unique, not null]
+  expires DateTime [not null]
+
+  indexes {
+    (identifier, token) [unique]
+  }
+}
+
+Ref: Destination.planetId > Planet.id [delete: Cascade]
+
+Ref: Launch.rocketId > Rocket.id [delete: Cascade]
+
+Ref: Launch.originId > Destination.id [delete: Cascade]
+
+Ref: Launch.destinationId > Destination.id [delete: Cascade]
+
+Ref: Launch.userId > User.id [delete: Cascade]
+
+Ref: Account.userId > User.id [delete: Cascade]
+
+Ref: Session.userId > User.id [delete: Cascade]

@@ -1,0 +1,135 @@
+.main__section {
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.row {
+  height: 100%;
+}
+
+.planetcardcontainer {
+  overflow-y: scroll;
+  margin-top: 5em;
+  margin-bottom: 0.8em;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-radius: 15px;
+}
+
+.name {
+  font-size: 4rem;
+  color: white;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+  margin-top: 2rem;
+}
+
+.description {
+  margin-top: 2rem;
+}
+
+.description p {
+  font-size: 1.4rem;
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  text-shadow: #000000 2px 2px 2px;
+}
+
+.description p span {
+  font-weight: 700;
+  text-shadow: #000000 2px 2px 2px;
+}
+
+.destinationContainer {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.cardData {
+  border-radius: 10px;
+  border: #6b09a3 2px solid;
+  text-align: center;
+  padding: 0.25em;
+  margin: 0.5em;
+  background-color: #171616;
+  color: white;
+}
+.cardData hr {
+  margin: 0.5em;
+  border-top-color: #6b09a3;
+  opacity: 1;
+}
+
+.destinationDataDiv {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.2em;
+}
+.destinationDataName {
+  font-size: 1em;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px #000000;
+  margin-right: 0.5em;
+}
+.destinationDataImageName {
+  font-size: 1em;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px #000000;
+  margin-right: 0.5em;
+}
+.destinationData {
+  margin: 0.2em;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.destinationPlanetImage {
+  display: inline;
+}
+
+.nameLink {
+  display: inline;
+  margin-left: 0.5em;
+}
+.nameLink a {
+  color: white;
+  display: inline;
+}
+
+@media (max-width: 576px) {
+  .description p {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+}
+@media (max-width: 992px) {
+  .row {
+    margin-top: 1em;
+    height: auto;
+  }
+
+  .name {
+    font-size: 3rem;
+    align-items: center;
+    text-align: center;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+  }
+
+  .description p {
+    font-size: 1.3rem;
+    color: white;
+    margin-left: 3em;
+    margin-right: 2em;
+  }
+}

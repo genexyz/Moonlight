@@ -1,0 +1,158 @@
+.main__section {
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.launchesContainer {
+  overflow-y: scroll;
+  overflow-x: scroll;
+  margin-top: 4.5em !important;
+}
+
+.launchesContainer::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.launchesContainer::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.launchesContainer::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(45deg, #00aeff, #a68eff);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 13px 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 3px 13px 1px;
+}
+
+.launchesSearchDiv {
+  margin-bottom: 2em !important;
+  border-radius: 20px !important;
+  border: 3px solid #5e24bb !important;
+}
+
+.launchesSearchInput {
+  background-color: #2f1755 !important;
+  line-height: 2 !important;
+  border-radius: 15px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border: 1px solid #2f1755 !important;
+  color: white !important;
+}
+.launchesSearchInput:focus {
+  background-color: #2f1755 !important;
+  box-shadow: none;
+}
+
+.launchesSearchGravityInput {
+  width: 80px;
+  height: 40px;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 0.8em;
+  color: black;
+  display: inline-block;
+}
+
+.launchesSearchFiltersMinMaxInput {
+  width: 100px;
+  height: 40px;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 0.8em;
+  color: black;
+  display: inline-block;
+}
+
+.launchesSearchFiltersMinMaxInputDate {
+  width: 150px;
+  height: 50px;
+  margin: 0.5rem;
+  color: black;
+  display: inline-block !important;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.launchesSearchFilters {
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  background-color: #2f1755 !important;
+  border-color: black !important;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.launchesSearchFiltersMinMaxTitle {
+  font-weight: 700;
+  color: #fff;
+  padding-left: 0.7em;
+  margin-right: 0.2em;
+}
+.launchesSearchFiltersMinMaxSymbol {
+  font-weight: 700;
+  color: #fff;
+}
+
+.table {
+  margin-bottom: 1em;
+}
+.table thead tr th {
+  font-weight: 700;
+}
+.table tbody tr th {
+  font-weight: 500;
+}
+
+.tableRow th {
+  vertical-align: middle;
+}
+
+.dataRow {
+  text-align: center;
+  overflow-x: scroll;
+  margin-right: 0.15em;
+  margin-left: 0.15em;
+}
+
+.iconImage {
+  padding: 0 !important;
+  padding-top: 4px !important;
+  margin: 0 !important;
+}
+
+.nameLink a {
+  color: white;
+}
+
+.editAdminBtn {
+  background-color: rgb(4, 175, 55);
+  color: #fff;
+  border: 0px solid #fff;
+  border-radius: 0.2em;
+  padding: 0.2em 0.5em;
+  font-size: 1em;
+  font-weight: 600;
+  margin-right: 0em;
+}
+.editAdminBtn:hover {
+  background-color: rgb(6, 209, 67);
+  color: #fff;
+}
+.editAdminBtn:active {
+  background-color: rgb(6, 209, 67);
+  color: #fff;
+}
+.editAdminBtn:focus {
+  background-color: rgb(4, 175, 55);
+  box-shadow: none;
+}
+
+.dateFilterDiv {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+}
