@@ -36,7 +36,6 @@ TODO:
 -Moon brightness effect on main page is cut on top when scrolling down.
 -Invalid styles on inputs aren't the same across all the app.
 -Small white square on rocket page, bottom right corner.
--Small margin on admin navbar, right to users.
 
 [To evaluate doing]
 -Generate individual pages statically to improve SEO. (this also means changing from a generated random ID to a unique name ID).

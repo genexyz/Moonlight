@@ -12,6 +12,7 @@
   max-width: 95%;
   background-color: #1c0522;
   overflow-y: scroll;
+  overflow-y: overlay;
 }
 
 .adminRow {
