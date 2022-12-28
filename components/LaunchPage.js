@@ -53,6 +53,7 @@ export default function LaunchPage(props) {
   const [hiddenStage3, setHiddenStage3] = useState(false);
   const [selectedRocket, setSelectedRocket] = useState(null);
   const [availableRockets, setAvailableRockets] = useState([]);
+  const [open, setOpen] = useState(false);
 
   const AutocompleteDestinationOptions = props.data.destinations.map((destination) => {
     return {
@@ -60,6 +61,10 @@ export default function LaunchPage(props) {
       id: destination.id,
     };
   });
+
+  const onKeyDown = (e) => {
+    e.preventDefault();
+  };
 
   const onDataChange = () => {
     setShowStage2(false);
@@ -436,12 +441,18 @@ export default function LaunchPage(props) {
                     <Form.Label>Launch Date</Form.Label>
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                       <DateTimePicker
+                        disablePast
+                        open={open}
+                        onOpen={() => setOpen(true)}
+                        onClose={() => setOpen(false)}
                         className={styles.errorInput}
                         value={launch.date}
                         onChange={onDateChange}
                         renderInput={(params) => (
                           <TextField
                             {...params}
+                            onKeyDown={onKeyDown}
+                            onClick={(e) => setOpen(true)}
                             sx={{
                               backgroundColor: "white",
                               borderRadius: "5px",

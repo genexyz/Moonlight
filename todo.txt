@@ -9,7 +9,6 @@ TODO:
 -Add Spinner for loading status.
 -Close Navbar when changing route on mobile.
 -Change Dropdowns light blue background for options.
--Improve Date Picker to avoid keyboard inputs and auto open on input click.
 -Expand app testing with cypress.
 -Optimize again with lighthouse and sonarcloud.
 -Create custom OG Image for social sharing.
@@ -18,7 +17,6 @@ TODO:
 -Highlight current route on navbar
 
 [LAUNCH]
--Remove past dates from datepicker.
 -Design a good looking ticket to be shown at the end of the launch creation process and in the specific launch page.
 -Implement discounts on launch price according to user level.
 -Improve rocket selection table on mobile.

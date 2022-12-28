@@ -26,6 +26,7 @@ const LaunchModal = (props) => {
   const [originName, setOriginName] = useState("");
   const [destinationName, setDestinationName] = useState("");
   const [userName, setUserName] = useState("");
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     setLaunch({
@@ -66,6 +67,10 @@ const LaunchModal = (props) => {
       id: user.id,
     };
   });
+
+  const onKeyDown = (e) => {
+    e.preventDefault();
+  };
 
   const handleClose = () => {
     setLaunch({
@@ -393,12 +398,17 @@ const LaunchModal = (props) => {
                 <Form.Label>Date</Form.Label>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DateTimePicker
-                    label="Launch Date"
+                    disablePast
+                    open={open}
+                    onOpen={() => setOpen(true)}
+                    onClose={() => setOpen(false)}
                     value={launch.date}
                     onChange={onDateChange}
                     renderInput={(params) => (
                       <TextField
                         {...params}
+                        onKeyDown={onKeyDown}
+                        onClick={(e) => setOpen(true)}
                         error={errors.date ? true : false}
                         helperText={errors.date}
                       />
