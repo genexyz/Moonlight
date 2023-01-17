@@ -1,10 +1,10 @@
 # Moonlight🚀
 
-Moonlight's mission is to provide safe and reliable transportation of cargo across the solar system.
+Moonlight's mission is to provide safe and reliable transportation of cargo across the Milky Way galaxy.
 
 ## Description
 
-The idea behind this project is to allow users to securely and efficiently transport cargo and people across the solar system. The website features a user-friendly interface that allows users to easily generate and view launches.
+The idea behind this project is to allow users to securely and efficiently transport cargo and people across the Milky Way galaxy. The website features a user-friendly interface that allows users to easily generate and view launches.
 
 In addition to the core functionality of the website, I implemented several additional features to enhance the user experience and to learn more about the Tech Stack used. These included CRUD functionality for Rockets, Planets, Destinations within Planets, Launches and Users, as well as fully responsive design for optimal use on any device and a custom 404 page.
 
@@ -12,7 +12,7 @@ While these features are currently functional, there are still several additiona
 
 The website includes a demo user that can be used to test the various CRUD actions, such as creating, reading, updating, and deleting entities. However, it is important to note that the demo user is only for testing purposes and any changes made during these actions will not be applied to the database. Instead, the website will simply notify the user that the change would have been correct or if it had any errors, without actually committing the change to the database.
 
-One of the most unique features of the website is the use of AI-generated images to depict the various planets and destinations within the solar system. This added a visually appealing element to the website and enhanced the user experience.
+One of the most unique features of the website is the use of AI-generated images to depict the various planets and destinations within the Milky Way galaxy. This added a visually appealing element to the website and enhanced the user experience.
 Overall, working on this project allowed me to demonstrate my skills in full-stack web development and my ability to overcome technical challenges. It was also a great opportunity for me to learn more about implementing secure authentication and authorization protocols with battle-tested libraries, as well as the use of AI in web design.
 
 ## Tech Stack

@@ -119,11 +119,11 @@ export default function Mainpage() {
           viewport={{ once: true }}
         >
           Moonlight{"'"}s mission is to provide safe and reliable transportation of cargo
-          across the solar system. The company strives to be the leading provider of space
-          transportation services, and to provide its customers with the highest level of
-          safety, security, and satisfaction. The company is committed to providing a safe
-          and efficient transportation system that meets the needs of its customers and
-          the solar system community.
+          across the Milky Way galaxy. The company strives to be the leading provider of
+          space transportation services, and to provide its customers with the highest
+          level of safety, security, and satisfaction. The company is committed to
+          providing a safe and efficient transportation system that meets the needs of its
+          customers and the Milky Way galaxy community.
         </motion.p>
         <motion.p
           initial={{ opacity: 0 }}
@@ -160,10 +160,11 @@ export default function Mainpage() {
         >
           Moonlight is committed to becoming an zero emission platform by 2080, with 100%
           of trips in low/zero-emission vehicles. Being the most important mobility
-          platform in the solar system, our commitment is to face the challenge of climate
-          change in the inner planets with more force. We will achieve this by investing
-          in the development of new technologies and by working with our partners to
-          accelerate the transition to a zero-emission future for the solar system.
+          platform in the Milky Way galaxy, our commitment is to face the challenge of
+          climate change in the inner planets with more force. We will achieve this by
+          investing in the development of new technologies and by working with our
+          partners to accelerate the transition to a zero-emission future for the sMilky
+          Way galaxy.
         </motion.p>
 
         <motion.h3 whileHover={{ scale: 1.05 }}>
@@ -176,10 +177,10 @@ export default function Mainpage() {
           viewport={{ once: true }}
         >
           In addition to helping cargo find a way to get around, we also offer a variety
-          of travel options for those who want to see the solar system. Space tourism is a
-          growing industry, and we are proud to be a part of it. Our goal is to make space
-          travel affordable and accessible to everyone. We are working hard to achieve
-          this goal, and we are excited to see what the future holds.
+          of travel options for those who want to see the Milky Way galaxy. Space tourism
+          is a growing industry, and we are proud to be a part of it. Our goal is to make
+          space travel affordable and accessible to everyone. We are working hard to
+          achieve this goal, and we are excited to see what the future holds.
         </motion.p>
 
         <motion.h3 initial={{ textAlign: "right" }} whileHover={{ scale: 1.05 }}>
