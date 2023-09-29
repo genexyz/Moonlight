@@ -1,6 +1,5 @@
 TODO:
 [APP-WIDE]
--Add i18n for multiple languages.
 -Create an User Profile page (User image, level, launches, visited planets, and more).
 -Optimize background images and remove the moving effects from some pages, to improve performance.
 -Login callback to previous page.
